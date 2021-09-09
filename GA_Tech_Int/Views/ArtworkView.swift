@@ -12,17 +12,16 @@ struct ArtworkView: View {
 
     var body: some View {
         ZStack {
-            if image != nil {
+            if image != nil { //Display artwork image
                 image?
                     .resizable()
-            } else {
+            } else { //Alternate view if result has no artwork image
                 Color(.systemBlue)
                 Image(systemName: "questionmark")
                     .font(.largeTitle)
                     .foregroundColor(.white)
             }
         }
-        //.frame(width: 100, height: 100)
     }
 }
 

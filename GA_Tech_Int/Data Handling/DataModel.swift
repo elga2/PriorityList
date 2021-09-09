@@ -78,8 +78,10 @@ struct PostList: Decodable {
 // Methods sending requests for data from API
 class DataModel {
     
-    private var dataTask: URLSessionDataTask?
+    @Published var appError: ErrorType? = nil
     
+    private var dataTask: URLSessionDataTask?
+        
     func loadPosts(completion: @escaping(([PostData]) -> Void)) {
         dataTask?.cancel()
         guard let url = buildUrl() else {
@@ -88,6 +90,7 @@ class DataModel {
         }
         
         dataTask = URLSession.shared.dataTask(with: url) { data, _, _ in
+
             DispatchQueue.main.async {
                 guard let data = data else {
                     completion([])

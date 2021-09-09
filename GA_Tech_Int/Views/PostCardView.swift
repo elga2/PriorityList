@@ -13,8 +13,10 @@ struct PostCardView: View {
     
     var body: some View {
         
+        //Rounding user rating to 1 decimal place
         let roundedRating = String(format: "%1.f", post.averageUserRating)
         
+        //Formatting individual card view
         HStack {
             ArtworkView(image: post.artwork)
                 .frame(width: 100, height: 100, alignment: .center)
@@ -28,7 +30,7 @@ struct PostCardView: View {
                         VStack(alignment: .leading) {
                             Text(post.versionReleaseDate)
                                 .font(.system(size: 12, weight: .regular, design: .default))
-                            Text("\((Int(post.fileSize)!/1000000))" + " MB") //NEED TO ROUND TO 1DP
+                            Text("\((Int(post.fileSize)!/1000000))" + " MB")
                                 .font(.system(size: 12, weight: .regular, design: .default))
                             Text("\(post.userRatingCount)")
                                 .font(.system(size: 12, weight: .regular, design: .default))
@@ -46,6 +48,6 @@ struct PostCardView: View {
 
 //struct PostCardView_Previews: PreviewProvider {
 //    static var previews: some View {
-//        PostCardView(post:)
+//        PostCardView(post: PostListViewModel().posts[0])
 //    }
 //}

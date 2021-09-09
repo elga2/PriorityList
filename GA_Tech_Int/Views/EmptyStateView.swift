@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+//Screen to be displayed when no data has been retrieved
 struct EmptyStateView: View {
     var body: some View {
         VStack {
@@ -14,7 +15,7 @@ struct EmptyStateView: View {
             Image(systemName: "clock.arrow.circlepath")
                 .font(.system(size: 85))
                 .padding(.bottom)
-            Text("Loading...")
+            Text("Loading data...")
                 .bold()
                 .font(.title)
             Spacer()

@@ -66,20 +66,3 @@ class PostViewModel: Identifiable, ObservableObject {
     }
 }
 
-//var testPost1: PostViewModel {
-//    let testPost = PostViewModel()
-//
-//    testPost.id = "1234567"
-//    testPost.trackName = "Test Name"
-//    testPost.version = "4.4.4"
-//    testPost.versionReleaseDate = "2000-01-01T00:00:00Z"
-//    testPost.fileSize = "14000000"
-//    testPost.userRatingCount = 50000
-//    testPost.averageUserRating = 4.0
-//    testPost.releaseNotes = "We've made some amazing new changes to our app thanks to our wonderful new developer G.Aldridge"
-//    testPost.artworkUrl = "https://variety.com/wp-content/uploads/2014/03/xbox-logo1.jpg?w=681&h=383&crop=1"
-//
-//    return testPost
-//
-//}
-
