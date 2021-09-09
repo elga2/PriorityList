@@ -9,6 +9,7 @@ import Foundation
 import SwiftUI
 
 struct PostCardView: View {
+    
     @ObservedObject var post: PostViewModel
     
     var body: some View {
@@ -45,9 +46,3 @@ struct PostCardView: View {
         }
     }
 }
-
-//struct PostCardView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        PostCardView(post: PostListViewModel().posts[0])
-//    }
-//}

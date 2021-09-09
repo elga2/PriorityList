@@ -16,7 +16,7 @@ struct PostDetailView: View {
         //Rounding user rating to 1 decimal place
         let roundedRating = String(format: "%1.f", post.averageUserRating)
 
-        //Formatting card detail view
+        //Formatting detail view
         VStack (alignment: .leading) {
             HStack {
                 Spacer()
@@ -72,9 +72,3 @@ struct PostDetailView: View {
         }
     }
 }
-
-//struct PostDetailView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        PostDetailView()
-//    }
-//}

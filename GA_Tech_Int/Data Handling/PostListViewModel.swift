@@ -19,10 +19,10 @@ class PostListViewModel: ObservableObject {
         setUp()
     }
     
+    //Removes and resets data/artwork before loading newly pulled data
     public func setUp() {
         posts.removeAll()
         artworkLoader.reset()
-        
         dataModel.loadPosts() { posts in
             posts.forEach { self.appendPost(post: $0)}
         }
@@ -42,7 +42,6 @@ class PostListViewModel: ObservableObject {
     }
 }
 
-// How does this differ from the data file?
 class PostViewModel: Identifiable, ObservableObject {
     let id: Int
     let trackName: String

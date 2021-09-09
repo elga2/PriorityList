@@ -13,15 +13,17 @@ struct ContentView: View {
     
     //Variables for the sort picker
     @State var selection: String = "Sort"
-    @State var filterOptions: [String] = ["Default", "Rating (Asc)", "Rating (Desc)"]
+    @State var sortOptions: [String] = ["Default", "Rating (Asc)", "Rating (Desc)"]
 
     var body: some View {
         
         NavigationView {
             if viewModel.posts.isEmpty {
-                EmptyStateView()
+                EmptyStateView() //Simply handle situation when no data retrieved.
+                //Future development could give user options to retry
             } else {
                 List(viewModel.posts) { post in
+                    //Makes cards clickable off to release notes detail page
                     NavigationLink(destination: PostDetailView(post: post)) {
                         PostCardView(post: post)
                     }
@@ -43,7 +45,7 @@ struct ContentView: View {
                             Image(systemName: "chevron.down")
                             },
                         content: {
-                            ForEach(filterOptions, id:\.self) { option in
+                            ForEach(sortOptions, id:\.self) { option in
                                 Text(option)
                                     .tag(option)
                             }.onChange(of: selection, perform: { value in //When selection changes, sort out the data accordingly
@@ -60,11 +62,6 @@ struct ContentView: View {
                 )
             }
         }
-//        .alert(item: $DataModel.appError) { app Error in
-//            Alert(title: Text("Oh Oh"), message:
-//            Text(appError.error.localizedDescription)
-//            )
-//        }
     }
 }
 

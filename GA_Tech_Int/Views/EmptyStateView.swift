@@ -15,7 +15,7 @@ struct EmptyStateView: View {
             Image(systemName: "clock.arrow.circlepath")
                 .font(.system(size: 85))
                 .padding(.bottom)
-            Text("Loading data...")
+            Text("Loading...")
                 .bold()
                 .font(.title)
             Spacer()

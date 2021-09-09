@@ -19,7 +19,6 @@
 		EE5AF77F26E8FE1C00E304C8 /* PostCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5AF77E26E8FE1C00E304C8 /* PostCardView.swift */; };
 		EE5AF78126E8FEB800E304C8 /* ArtworkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5AF78026E8FEB800E304C8 /* ArtworkView.swift */; };
 		EE5AF78326E9518000E304C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE5AF78226E9518000E304C8 /* LaunchScreen.storyboard */; };
-		EE93DD2B26EA740200934413 /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE93DD2A26EA740200934413 /* ErrorHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,7 +36,6 @@
 		EE5AF77E26E8FE1C00E304C8 /* PostCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCardView.swift; sourceTree = "<group>"; };
 		EE5AF78026E8FEB800E304C8 /* ArtworkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkView.swift; sourceTree = "<group>"; };
 		EE5AF78226E9518000E304C8 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		EE93DD2A26EA740200934413 /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +93,6 @@
 				EE105B3026E774420090D6D2 /* PostListViewModel.swift */,
 				EE5AF77C26E8F52400E304C8 /* DataModel.swift */,
 				EE105B3226E77D2D0090D6D2 /* ArtworkLoader.swift */,
-				EE93DD2A26EA740200934413 /* ErrorHandler.swift */,
 			);
 			path = "Data Handling";
 			sourceTree = "<group>";
@@ -185,7 +182,6 @@
 				EE5AF77F26E8FE1C00E304C8 /* PostCardView.swift in Sources */,
 				EE5AF78126E8FEB800E304C8 /* ArtworkView.swift in Sources */,
 				EE105B3726E7812F0090D6D2 /* EmptyStateView.swift in Sources */,
-				EE93DD2B26EA740200934413 /* ErrorHandler.swift in Sources */,
 				EE105B2026E757DD0090D6D2 /* ContentView.swift in Sources */,
 				EE105B3326E77D2D0090D6D2 /* ArtworkLoader.swift in Sources */,
 				EE5AF74E26E8A29D00E304C8 /* PostDetailView.swift in Sources */,

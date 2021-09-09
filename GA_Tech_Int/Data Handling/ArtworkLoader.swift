@@ -8,24 +8,23 @@
 import Foundation
 import SwiftUI
 
-//Building the taks to load the images from API asynchronously
+//Building the tasks to load the images from API asynchronously
 class ArtworkLoader {
     private var dataTasks: [URLSessionDataTask] = []
     
     func loadArtwork(forPost post: PostData, completion: @escaping((Image?) -> Void)) {
-        //Build URL for artwork
+        //Get URL string and converting to URL object
         guard let imageUrl = URL(string: post.artworkUrl) else {
             completion(nil)
             return
         }
         
+        //Create data task if we are able to create URL then append to data tasks so we can download the image
         let dataTask = URLSession.shared.dataTask(with: imageUrl) { data, _, _ in
-            //Make sure we got data for image
             guard let data = data, let artwork = UIImage(data: data) else {
                 completion(nil)
                 return
             }
-            //Create image object
             let image = Image(uiImage: artwork)
             completion(image)
         }
